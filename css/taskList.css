@@ -1,6 +1,7 @@
 .tasks {
     width: 100%;
     background-color: white;
+    margin-bottom: 40px;
 }
 
 .tasks__header {
@@ -10,30 +11,43 @@
     border-bottom: 2px solid #e9e9e9f0; 
 }
 
+.tasks__list {
+    margin-top: 0;
+    padding: 25px 0 5px;
+}
+
 .tasks__item {
     list-style: none;
     font-weight: 400;
     border-bottom: 2px solid #e9e9e9f0;
-    margin: 20px 30px 20px -10px;
+    margin: 20px 30px;
     padding: 10px;
-    position: relative;
+    display: flex;
 }
 
-.tasks__list {
-    margin-top: 0;
-    padding-top: 25px;
-    padding-bottom: 5px
+.tasks__content {
+    margin: auto;
+    word-break: break-word;
+    flex-grow: 1;
 }
 
 .tasks__button {
     border: none;
     background-color: white;
     font-size: 32px;
-    color: white;
-    text-align: left;
 }
 
-.tasks__button--delete {
-    position: absolute;
-    right: 10px;
+@media (max-width: 767px) {
+    .tasks__header {
+        font-size: 24px;
+        padding-left: 7.5%;
+        padding-right: 7.5%;
+    }
+
+    .tasks__item {
+        padding: 10px 0;
+        width: 85%;
+        margin: 0 auto;
+        gap: 5px;
+    }
 }

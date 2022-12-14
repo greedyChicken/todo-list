@@ -35,9 +35,11 @@
         for (const task of tasks) {
             htmlString += `
                 <li class="tasks__item">
-                    <button class="tasks__button tasks__button--done js-toggleTask">🟩</button>
-                    ${task.content}
-                    <button class="tasks__button tasks__button--delete js-removeTask">🗑️</button>
+                    <button class="tasks__button js-toggleTask">🟩</button>
+                    <span class="tasks__content">
+                        ${task.content}
+                    </span>
+                    <button class="tasks__button js-removeTask">🗑️</button>
                 </li>
             `;
         }
@@ -53,6 +55,8 @@
         event.preventDefault();
 
         const inputElement = document.querySelector(".js-input");
+
+        inputElement.focus();
 
         if (inputElement.value.trim()) {
             addNewTask(inputElement.value);
