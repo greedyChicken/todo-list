@@ -19,6 +19,10 @@
     flex-grow: 1;
 }
 
+.taskList__item--textCrossed {
+    text-decoration: line-through;
+}
+
 .taskList__button {
     border: none;
     width: 40px;

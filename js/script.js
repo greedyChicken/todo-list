@@ -43,7 +43,7 @@
                     <button class="taskList__button taskList__button--done js-toggleTask">
                         ${task.done ? "✔️" : ""}
                     </button>
-                    <span class="taskList__item--text">
+                    <span class="taskList__item--text js-taskListText ${task.done ? "taskList__item--textCrossed" : ""}">
                         ${task.content}
                     </span>
                     <button class="taskList__button taskList__button--remove js-removeTask">
