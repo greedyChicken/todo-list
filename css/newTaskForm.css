@@ -1,60 +1,55 @@
-.newTask {
+/* .newTask {
     margin-bottom: 15px;
     width: 100%;
     background-color: white;
-}
+} */
 
-.newTask__header {
+/* .newTask__header {
     font-size: 32px;
     margin: 0;
     padding: 30px;
     border-bottom: 2px solid #e9e9e9f0; 
-}
+} */
 
-.newTask__form {
+.form {
     display: flex;
     margin: 0;
     padding: 30px;
 }
 
-.newTask__input {
+.form__input {
     flex-grow: 1;
-    font-size: 24px;
+    font-size: 22px;
     padding: 15px;
     margin-right: 25px;
     border: 2px solid #e9e9e9f0;
 }
 
-.newTask__button {
-    width: 20%;
+.form__button {
+    max-width: 350px;
     background-color: teal;
     color: white;
     border: none;
-    padding: 10px 0; 
+    padding: 10px 10px; 
     font-size: 22px;
 }
 
 @media (max-width: 767px) {
-    .newTask__header {
-        font-size: 24px;
-        padding-left: 7.5%;
-        padding-right: 7.5%;
-    }
-
-    .newTask__form {
+    .form {
         flex-direction: column;
         align-items: center;
         padding: 25px 0;
     }
 
-    .newTask__input {
+    .form__input {
         width: 85%;
         font-size: 20px;
         padding: 10px;
         margin: 0 0 15px 0;
     }
 
-    .newTask__button {
+    .form__button {
+        max-width: 1000px;
         width: 85%;
         font-size: 20px;
     }

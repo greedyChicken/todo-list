@@ -11,6 +11,11 @@
         render();
     }
 
+    const toggleTask = (taskIndex) => {
+        tasks[taskIndex].done = !tasks[taskIndex].done;
+        render();
+    }
+
     const bindEvents = () => {
         const removeBtns = document.querySelectorAll(".js-removeTask");
 
@@ -24,7 +29,7 @@
 
         toggleBtns.forEach((toggleBtn, index) => {
             toggleBtn.addEventListener("click", () => {
-                toggleBtn.textContent = toggleBtn.textContent === "🟩" ? "✅" : "🟩";
+                toggleTask(index);
             })
         });
     }
@@ -34,12 +39,16 @@
 
         for (const task of tasks) {
             htmlString += `
-                <li class="tasks__item">
-                    <button class="tasks__button js-toggleTask">🟩</button>
-                    <span class="tasks__content">
+                <li class="taskList__item">
+                    <button class="taskList__button taskList__button--done js-toggleTask">
+                        ${task.done ? "✔️" : ""}
+                    </button>
+                    <span class="taskList__item--text">
                         ${task.content}
                     </span>
-                    <button class="tasks__button js-removeTask">🗑️</button>
+                    <button class="taskList__button taskList__button--remove js-removeTask">
+                        🗑️
+                    </button>
                 </li>
             `;
         }
