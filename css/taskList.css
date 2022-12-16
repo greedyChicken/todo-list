@@ -30,6 +30,7 @@
     font-size: 24px;
     text-align: center;
     padding: 0;
+    transition: 0.4s;
 }
 
 .taskList__button--done {
@@ -38,6 +39,14 @@
 
 .taskList__button--remove {
     background-color: red;
+}
+
+.taskList__button:hover {
+    opacity: 0.8;   
+}
+
+.hideElement {
+    display: none;
 }
 
 @media (max-width: 767px) {
@@ -52,3 +61,5 @@
         flex-shrink: 0;
     }
 }
+
+
